@@ -5,7 +5,7 @@ import com.sun.net.httpserver.HttpHandler;
 import java.io.IOException;
 import java.io.OutputStream;
 import java.nio.charset.StandardCharsets;
-import src.solid.principles.srp.entity.ShoppingCart;
+import src.solid.principles.srp.without.entity.ShoppingCart;
 
 public class Root implements HttpHandler {
 

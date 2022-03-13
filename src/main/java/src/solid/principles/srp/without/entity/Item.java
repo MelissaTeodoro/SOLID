@@ -1,4 +1,4 @@
-package src.solid.principles.srp.entity;
+package src.solid.principles.srp.without.entity;
 
 public class Item {
 
