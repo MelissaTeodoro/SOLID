@@ -1,4 +1,4 @@
-package src.solid.principles.pages.root;
+package src.solid.principles.srp.without.pages.root;
 
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
@@ -13,6 +13,8 @@ public class Root implements HttpHandler {
   public void handle(HttpExchange exchange) throws IOException {
     final StringBuilder outBuilder = new StringBuilder();
     final ShoppingCart shoppingCart = new ShoppingCart();
+
+    outBuilder.append("Without SRP - SOLID");
 
     shoppingCart.addItem("Tênis Feminino", 200L);
     shoppingCart.addItem("Boné Feminino", 90L);

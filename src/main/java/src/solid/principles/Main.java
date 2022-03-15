@@ -5,7 +5,7 @@ import java.io.IOException;
 import java.net.InetSocketAddress;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-import src.solid.principles.pages.root.Root;
+import src.solid.principles.srp.with.pages.root.Root;
 
 public class Main {
 
@@ -25,4 +25,3 @@ public class Main {
   }
 
 }
-
