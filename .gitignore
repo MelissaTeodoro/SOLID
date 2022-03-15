@@ -2,6 +2,7 @@
 HELP.md
 /target/
 */target/**
+.target
 **/META-INF/
 !.mvn/wrapper/maven-wrapper.jar
 build/
