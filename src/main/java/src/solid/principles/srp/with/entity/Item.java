@@ -1,5 +1,7 @@
 package src.solid.principles.srp.with.entity;
 
+import java.util.Objects;
+
 public class Item {
 
   private String name;
@@ -24,6 +26,10 @@ public class Item {
 
   public void setValue(Long value) {
     this.value = value;
+  }
+
+  public boolean isValid() {
+    return !Objects.equals(this.name, "") && this.value > 0;
   }
 
   @Override

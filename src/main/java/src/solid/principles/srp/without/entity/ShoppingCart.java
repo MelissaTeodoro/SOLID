@@ -2,6 +2,7 @@ package src.solid.principles.srp.without.entity;
 
 import java.util.LinkedList;
 import java.util.List;
+import java.util.Objects;
 
 public class ShoppingCart {
 
@@ -18,13 +19,20 @@ public class ShoppingCart {
     return items;
   }
 
+  public boolean isValidItem(final Item item) {
+    return !Objects.equals(item.getName(), "") && item.getValue() > 0;
+  }
+
   public boolean addItem(final String name, final Long value) {
     final Item item = new Item();
     item.setName(name);
     item.setValue(value);
 
-    this.total += value;
-    return items.add(item);
+    if (isValidItem(item)) {
+      this.total += value;
+      return items.add(item);
+    }
+    return false;
   }
 
   public Long getTotal() {
@@ -46,7 +54,8 @@ public class ShoppingCart {
   }
 
   public void sendEmailConfirmOrder() {
-    System.out.println("Send order confirmation email......"); ;
+    System.out.println("Send order confirmation email......");
+    ;
   }
 
   public boolean isValidCart() {
