@@ -7,6 +7,11 @@ public class Item {
   private String name;
   private Long value;
 
+  public Item() {
+    this.name = "";
+    this.value = 0L;
+  }
+
   public Item(String name, Long value) {
     this.name = name;
     this.value = value;
